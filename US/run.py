@@ -36,10 +36,8 @@ def get_fib():
             )
         else:#found the hostname
             data_list = data_str.split()
-            print(f"---------------------------------{data_list=}--------------------")
             #ip of hostname to return
             fs_ip=data_list[2].split('=')[1]
-            print(f"--------------------------{fs_ip=}-----------------------")
             #querying FS server for fibonacci answer
             url = "http://"+fs_ip+":9090/fibonacci?number="+number
             res_json = requests.get(url=url)

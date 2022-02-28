@@ -32,8 +32,6 @@ if __name__=='__main__':
             if data_list[0].split('=')[1] == 'A':
                 target_ip = data_list[2].split('=')[1]
                 hostname = data_list[1].split('=')[1]
-                print(f"{data_list=}")
-                print(f"{target_ip=},{hostname=}")
                 DNS_records[hostname]= target_ip
                 reg_response_message = "Registration success"
                 mes = bytes(reg_response_message,"utf-8")
