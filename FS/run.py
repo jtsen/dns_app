@@ -43,7 +43,7 @@ def fib_calc():
         #parse the json object for the ip/port for setting up UDP connection
         udp_ip, udp_port = data['as_ip'], int(data['as_port'])
         #registration message
-        reg_message = f"TYPE=A\nNAME={data['hostname']}\nVALUE={data['as_ip']}\nTTL=10\n"
+        reg_message = f"TYPE=A\nNAME={data['hostname']}\nVALUE={data['ip']}\nTTL=10\n"
         #Establish UDP connection and send registration message
         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         sock.connect((udp_ip,udp_port))
